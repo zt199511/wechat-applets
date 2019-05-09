@@ -1,0 +1,9 @@
+/**index wxss**/
+
+.swier-cen {
+    width: 100%;
+}
+
+.swier-cen .slide-image {
+    width: 100%;
+}

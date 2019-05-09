@@ -1,0 +1,43 @@
+<!--compute.wxml-->
+<view class="compute_page">
+    <button class="btn showcom_btn  {{sideHide==true ? 'sideShow' : ''}}" bindtap="showCompute" type="default" size="mini">SHOW</button>
+    <view class="compute_bot {{sideHide==true ? 'sideHide' : ''}}">
+      
+      <view class="compute_area">
+         <view class="compute_num">{{computeNum}}</view>
+         <view class="compute_result">{{computeResult}}</view>
+      </view>
+      <view style="display:none;">
+        {{percentNum}}
+      </view>
+      <view class="btn_area">
+         <view style="margin-right:-20rpx">
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id7}}">7</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id8}}">8</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id9}}">9</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="percentCompute" type="default" size="mini" id="{{btnId.id22}}">%</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id16}}">
+              <image src="../../images/back.png" style="width:43rpx;height:30rpx;"></image>
+            </button>
+            <button class="btn btn-md-1 btn-style-4" bindtap="computeClick" type="default" size="mini" id="{{btnId.id19}}">C</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id4}}">4</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id5}}">5</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id6}}">6</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id11}}">+</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id12}}">-</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id20}}">（</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id1}}">1</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id2}}">2</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id3}}">3</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id13}}">x</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id14}}">÷</button>
+            <button class="btn btn-md-1 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id21}}">）</button>
+            <button class="btn btn-md-2 btn-style-2" bindtap="computeClick" type="default" size="mini" id="{{btnId.id18}}">收起计算器</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id0}}">0</button>
+            <button class="btn btn-md-1 btn-style-1" bindtap="computeClick" type="default" size="mini" id="{{btnId.id15}}">.</button>
+            <button class="btn btn-md-2 btn-style-3" bindtap="computeClick" type="default" size="mini" id="{{btnId.id17}}">=</button>
+        </view>
+    </view>
+  </view>
+
+</view>
