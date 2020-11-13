@@ -1,31 +1,50 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/compute/compute"
+    "pages/news/news",
+    "pages/classification/classification",
+    "pages/question/question",
+    "pages/compute/compute",
+    "pages/newdetail/newdetail",
+    "pages/mine/mine",
+    "pages/shoppingcart/shoppingcart"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "快账",
+    "navigationBarTitleText": "周涛的小程序",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#02b28f",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "image/icon_component.png",
-        "selectedIconPath": "image/icon_component_HL.png",
-        "text": "组件"
+        "iconPath": "images/foot1_.png",
+        "selectedIconPath": "images/foot1.png",
+        "text": "首页"
       },
       {
-        "pagePath": "pages/compute/compute",
-        "iconPath": "image/icon_component.png",
-        "selectedIconPath": "image/icon_component_HL.png",
-        "text": "组件"
+        "pagePath": "pages/classification/classification",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component_HL.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "iconPath": "images/buycar.png",
+        "selectedIconPath": "images/buycar_HL.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/foot3_.png",
+        "selectedIconPath": "images/foot3.png",
+        "text": "个人中心"
       }
     ]
   },
@@ -34,6 +53,9 @@
     "connectSocket": 10000,
     "uploadFile": 10000,
     "downloadFile": 10000
+  },
+  "usingComponents":{
+    "van-icon": "@vant/weapp/icon/index"
   },
   "debug": false,
   "sitemapLocation": "sitemap.json"

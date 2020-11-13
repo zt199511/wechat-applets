@@ -1,0 +1,18 @@
+<view class="new-list view-ul">
+    <view class="new-item border-t" wx:for="{{questionJson}}" bindtap="onTapdetail" data-id="{{item.id}}" wx:key="key" wx:for-item="item">
+        <view class="news_info">
+          <text class="new_title">{{item.title}}</text>
+          <view class="new_bottom">
+            <text class="new_bottom_info new_from">来源：快账</text>
+            <text class="new_bottom_info new_time">{{item.timestamp}}</text>
+          </view>
+        </view>
+        <view class="news_img">
+          <image src="{{item.thumbnails_qqnews}}" alt="{{item.title}}"></image>
+        </view>
+    </view>
+</view>
+<view class="load_more">
+    <text class="load_more_tips"  wx:if="{{hasMore}}">玩了命的加载中...</text>
+    <text class="load_more_tips"  wx:else>没有更多内容</text>
+</view>

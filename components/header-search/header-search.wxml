@@ -1,0 +1,5 @@
+<van-search style='height:{{navHeight}}px;padding-top:{{navTop}}px' 
+class="search-bar" value="{{ value }}" 
+custom-class="search-bar-cen" background="false" shape="round"
+  placeholder="请输入搜索关键词" />
+<view style='height:{{navHeight}}px'></view>

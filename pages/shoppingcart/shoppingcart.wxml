@@ -1,0 +1,38 @@
+<!--pages/shoppingcart/shoppingcart.wxml-->
+<view class="shop-cart-main" wx-if="{{shopCartLists.length > 0}}">
+  <view wx:for="{{shopCartLists}}" class="cart-swiper-cell">
+    <van-swipe-cell class="cart-swiper-centet s-{{index}}" id="swipe-cell" right-width="{{ 65 }}" data-index="{{index}}" async-close bind:close="onClose" >
+      <van-cell-group>
+        <view class="goods-card">
+          <van-checkbox value="{{ item.checked }}" checked-color="#07c160" data-id="{{item.id}}" data-index="{{index}}" bind:change="changeItem">
+          </van-checkbox>
+          <van-card price="{{item.price}}"  title="{{item.name}}" thumb="{{ item.imageURL }}" custom-class="cart-card"/>
+          <view class="stepper-box">
+            <van-stepper value="{{item.num}}" data-index="{{index}}" bind:change="changeGoodsNum" />
+          </view>
+         
+        </view>
+
+      </van-cell-group>
+      <view slot="right" class="van-swipe-cell__right">删除</view>
+    </van-swipe-cell>
+
+  </view>
+  <van-divider contentPosition="center"  custom-style="padding-bottom:120rpx;">暂无更多</van-divider>
+  <van-submit-bar
+  price="{{ priceTotal }}"
+  button-text="去结算{{goodsNum}}"
+  bind:submit="onSubmit"
+  >
+  <view>
+    <van-checkbox value="{{allChecked}}" checked-color="#07c160"  bind:change="changeAll">
+      全选
+          </van-checkbox>
+  </view>
+  </van-submit-bar>
+</view>
+<van-empty description="购物车暂无商品！"  wx:else>
+  <van-button round type="danger" class="bottom-button">
+    去购买
+  </van-button>
+</van-empty>

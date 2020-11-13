@@ -1,0 +1,31 @@
+.question-body {
+    position: absolute;
+    bottom: 0;
+    top: 160rpx;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.question-body .left-chiose {
+    width: 28%;
+    height: 100%;
+    background: #f5f6f6;
+}
+
+.question-body .right-list {
+    width: 72%;
+    height: 100%;
+}
+
+input {
+    width: 720rpx;
+    height: 72rpx;
+    background-image: linear-gradient( #f2f4f7, #f2f4f7), linear-gradient( #ffffff, #ffffff);
+    background-blend-mode: normal, normal;
+    border-radius: 32rpx;
+    text-align: center;
+    margin-left: 25rpx;
+    border: none;
+    margin: 50rpx auto;
+}

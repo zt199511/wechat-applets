@@ -1,1 +1,14 @@
-{}
+{
+  "usingComponents":{
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-grid": "@vant/weapp/grid/index",
+     "van-grid-item": "@vant/weapp/grid-item/index",
+     "back-top": "/components/back-top/back-top" 
+  },
+  "navigationBarBackgroundColor": "#4fc08d",
+  "navigationBarTitleText": ""
+}

@@ -1,12 +1,55 @@
-<!--index.wxml-->
-<view class="container">
- <swiper class="swier-cen" indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
-    </swiper-item>
-  </block>
-</swiper>
-<map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+<!-- index.wxml -->
+<import src="../../templates/templates" />
+<van-sticky class="header-container">
+  <van-search value="{{ value }}" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" />
+  <view class="choose-tabs-bar">
+    <van-tabs style="width:calc(100% - 40px)" active="{{ categoryActive }}" bind:change="onChangeTabs" custom-class="category-tabs" tab-active-class="tab-active-class">
+      <van-tab wx:for="{{ categoryNavLists }}" title="{{ item.title }}"></van-tab>
+    </van-tabs>
+    <view class="tabs-arrow-down">
+      <van-icon name="{{arrowTabsShow?'arrow-up':'arrow-down'}}" color="white" size="16" bindtap="setArrowBox" />
+    </view>
+    <view class="tabs-arrow-box" hidden="{{!arrowTabsShow}}">
+      <view class="mr">
+        <view class="tabs-btn {{categoryActive == index?'actived':''}}" data-index="{{index}}" wx:for="{{ categoryNavLists }}" bindtap="chooseTab">
+          {{ item.title }}
+        </view>
+      </view>
+    </view>
+  </view>
+</van-sticky>
+<view class="main">
+  <view class="bg"></view>
+  <view class="index-banner-swiper swiper-cen">
+    <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#fff" circular="true">
+      <block wx:for="{{banner}}" wx:key="*this">
+        <swiper-item class="swiper-item">
+          <image src="{{item.image}}" class="swiper-banner-img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <van-grid column-num="4" border="{{ false }}" custom-class="category-grid" gutter="{{ 10 }}">
+    <van-grid-item use-slot wx:for="{{ 8 }}" link-type="navigateTo" url="/pages/question/question" custom-class="category-grid-item" wx:for-item="index">
+      <image class="category-grid-item-img" src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg" />
+      <text class="category-grid-item-name">苹果机</text>
+    </van-grid-item>
+  </van-grid>
+  <view class="new-lists">
+    <view wx:for="{{newsLists}}" class="new-item">
+      <view class="new-img-box">
+        <image class="new-img" src="{{item.img}}"></image>
+      </view>
+      <view class="new-info">
+        <view class="new-title  text_ellipsis_2">{{item.title}}</view>
+        <view class="new-binfo">
+          <text class="new-time">{{item.diffTime}}</text>
+          <text class="new-comment_num">{{item.comment_num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
+<van-overlay show="{{  arrowTabsShow }}" bind:click="setArrowBox" />
+<back-top scrollTop="{{scrollTop}}"></back-top>
+<!-- <template is="reqLoading" data="{{loading}}"></template> -->

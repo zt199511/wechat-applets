@@ -1,0 +1,64 @@
+/* pages/classification/classification.wxss */
+
+page{
+  background: #F5F6F6;
+}
+.classification-search-body{
+  background: red;
+  padding: 20rpx 0;
+}
+.classification-body {
+  
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+}
+
+.classification-body .left-chiose {
+  width: 28%;
+  height: 100vh;
+ 
+}
+
+.classification-body .right-list {
+  width: 72%;
+  height: 100vh;
+  background: #fff;
+}
+
+input {
+  width: 720rpx;
+  height: 72rpx;
+  background-image: linear-gradient( #f2f4f7, #f2f4f7), linear-gradient( #ffffff, #ffffff);
+  background-blend-mode: normal, normal;
+  border-radius: 32rpx;
+  text-align: center;
+  margin-left: 25rpx;
+  font-size:28rpx;
+  border: none;
+  margin: 0 auto;
+}
+
+.leftfont-sty{
+  height: 120rpx;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 120rpx;
+  font-size:26rpx;
+}
+
+.leftfont-sty.act{
+  color: #13c29f;
+  background: #fff;
+}
+
+.right-list .classification-item{
+  height:100%;
+  padding:20rpx;
+}
+.right-list .classification-item .item-name{
+  font-size:28rpx;
+
+}

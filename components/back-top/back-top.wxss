@@ -1,0 +1,20 @@
+/* components/backTop/backTop.wxss */
+.back-top{
+  position: fixed;
+  right: 50rpx;
+  bottom: 150rpx;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  box-shadow: 0 3rpx 18rpx #e9ebeb;
+  background-color: rgba(255, 255, 255, .8);
+  
+}
+.back-top .back-top-img{
+    display: block;
+    margin: auto;
+    height: 46rpx;
+    width: 46rpx;
+    margin-top: 17rpx;
+    opacity: .8;
+}

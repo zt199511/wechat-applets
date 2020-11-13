@@ -1,0 +1,101 @@
+/* pages/mine/mine.wxss */
+.header .user-info{
+  display: flex;
+  justify-content: flex-start;
+  padding: 30rpx;
+}
+.header .user-info .my-msg-avatar{
+  margin-right: 6rpx;
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.08);
+  border: solid 4rpx #ffffff;
+}
+.header .user-info .my-msg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info .wx-login-shouquan{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #02b28f;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+}
+.header .user-info .my-msg .my-msg-userid{
+  background: rgb(238,238,238);
+	border-radius: 30rpx;
+	color: rgb(150,150,150);
+	text-align: center;
+	padding: 0 15rpx 0 15rpx;
+	margin-right: 13rpx;
+  font-size: 24rpx;
+}
+.header .user-info .my-msg .my-msg-name{
+   font-size:14px;
+}
+.your-active{
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx auto 0;
+  width: 670rpx;
+  height: 155rpx;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 8rpx 0px 
+  rgba(9, 50, 35, 0.15);
+  border-radius: 20rpx;
+}
+.your-active .acvtie-type{
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.your-active .acvtie-type .type{
+  margin-top: 5rpx;
+  color: #a5a5a5;
+  font-size: 26rpx;
+}
+.your-active .acvtie-type .num{
+
+  color: #000;
+  font-size: 40rpx;
+}
+.your-active .acvtie-type::after{
+  content: "";
+  position: absolute;
+  display: block;
+  height: 60rpx;
+  border-left: 1px solid #eee;
+  right: 0;
+  top: 52rpx;
+}
+.your-active .acvtie-type.no-border::after{
+  display: none;
+}
+
+.item-group{
+ margin-top: 20rpx;
+ padding: 0 40rpx;
+}
+.item-group .item{
+  display: flex;
+  height: 100rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #000;
+  border-bottom: 1px solid #f4f6f8;
+}
+.item-group .item .right{
+
+  width: 42rpx;
+  height: 42rpx;
+}

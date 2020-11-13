@@ -1,0 +1,47 @@
+/* pages/shoppingcart/shoppingcart.wxss */
+page{
+  background: #fafafa;
+}
+.shop-cart-main .van-swipe-cell__right,
+.shop-cart-main .van-swipe-cell__left{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.goods-card{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-left: 32rpx;
+}
+.goods-card .van-card{
+  padding-left: 0;
+}
+.shop-cart-main .cart-swiper-cell{
+  margin-bottom:16rpx;
+  background: #fff;
+  
+}
+.shop-cart-main .cart-swiper-cell .cart-card{
+  background: #fff;
+  background-color: #fff;
+}
+.cart-swiper-centet{
+  position: relative;
+}
+
+.cart-swiper-centet .stepper-box{
+
+  position: absolute;
+  right: 32rpx;
+  bottom: 16rpx;
+}
+
+.bottom-button{
+  width: 160px;
+  height: 40px;
+}

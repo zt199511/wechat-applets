@@ -1,7 +1,11 @@
 <!--compute.wxml-->
 <view class="compute_page">
+<!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+
+<!-- 需要使用 button 来授权登录 -->
+
     <button class="btn showcom_btn  {{sideHide==true ? 'sideShow' : ''}}" bindtap="showCompute" type="default" size="mini">SHOW</button>
-    <view class="compute_bot {{sideHide==true ? 'sideHide' : ''}}">
+    <view class="compute_bot {{sideHide==true ? 'sideHide' : ''}}" >
       
       <view class="compute_area">
          <view class="compute_num">{{computeNum}}</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "header-search": "/components/header-search/header-search" 
+  },
+  "navigationBarTitleText":"",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationStyle": "custom"
+}

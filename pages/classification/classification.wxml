@@ -1,0 +1,21 @@
+<header-search></header-search>
+<view class="classification-body">
+    <view class="left-chiose">
+      <scroll-view scroll-y="true" style="height:100%" scroll-top="{{leftScrollTop}}">
+        <block wx:for="{{classificationsTypeLists}}">                
+          <view class="leftfont-sty {{firstid==index?'act':''}}" id="l{{item.id}}" bindtap="choicfir" data-id="{{item.id}}" data-index="{{index}}" data-name="{{item.name}}">
+            {{item.name}}</view>
+          </block>
+    </scroll-view>
+    </view>
+    <view class="right-list">
+      <scroll-view scroll-y="true"  style="height:100%" bindscroll="scorllRightBody" scroll-into-view="{{scrollIntoView}}" bindscrolltolower="bottomtap">
+        <block wx:for="{{classificationsLists}}">
+          <view id="s{{item.id}}" class="classification-item">
+            <text class="item-name">{{item.name}}</text>
+            <view class="item-body"></view>
+          </view>
+        </block>     
+      </scroll-view>
+    </view>
+</view>

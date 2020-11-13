@@ -1,0 +1,66 @@
+<!--pages/mine/mine.wxml-->
+ <!-- <import src="../../templates/login.wxml" /> -->
+ <view class="header" wx-if="{{userInfo.nickName}}">
+  <view class="user-info">
+     <image src="{{userAvatar}}" class="my-msg-avatar"></image>
+     <view class="my-msg">
+         <view class="my-msg-top">
+           <text class="my-msg-name">{{userInfo.nickName}}</text>
+         </view>
+         <view class="my-msg-bottom">
+            <text class="my-msg-meal">{{userGroup}}</text>
+            <text class="my-msg-userid">学号：{{userid}}</text>
+         </view>
+     </view>
+  </view>
+</view>
+<view class="header" wx-if="{{!userInfo.nickName}}">
+  <view class="user-info">
+     <image src="{{userAvatar}}" class="my-msg-avatar"></image>
+     <button open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" class="wx-login-shouquan" id="wxLogin">一键登录</button>
+    
+
+  </view>
+</view>
+<view class="your-active">
+ <view class="acvtie-type">
+   <view class="num">{{acvtieNums.scoreCount}}</view>
+   <view class="type">积分</view>
+ </view>
+ <view class="acvtie-type">
+  <view class="num">{{acvtieNums.scoreCount}}</view>
+   <view class="type">预约</view>
+ </view>
+ <view class="acvtie-type no-border">
+  <view class="num">{{acvtieNums.scoreCount}}</view>
+   <view class="type">关注</view>
+ </view>
+</view>
+<view class="item-group">
+  <view class='item clear' bindtap='toactivation'>
+    我的激活码
+    <image class='right' src='https://al3.acc5.com/11250403_5e167d0432e1c.png'></image>
+  </view>
+  <view class='item clear' bindtap='toactivation'>
+    帮助中心
+    <image class='right' src='https://al3.acc5.com/11250403_5e167d0432e1c.png'></image>
+  </view>
+  <view class='item clear' bindtap='toactivation'>
+    设置
+    <image class='right' src='https://al3.acc5.com/11250403_5e167d0432e1c.png'></image>
+  </view>
+  <view class='item clear' bindtap='toactivation'>
+   观看记录
+    <image class='right' src='https://al3.acc5.com/11250403_5e167d0432e1c.png'></image>
+  </view>
+  <view class='item clear' bindtap='toactivation'>
+    客服咨询
+    <image class='right' src='https://al3.acc5.com/11250403_5e167d0432e1c.png'></image>
+  </view>
+  <view class='item clear' bindtap='toactivation'>
+    关于我们
+    <image class='right' src='https://al3.acc5.com/11250403_5e167d0432e1c.png'></image>
+  </view>
+</view>
+
+ <template is="login" data="{{showPopup: showPopup, canIUse: canIUse}}"></template>

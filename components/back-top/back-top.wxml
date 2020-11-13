@@ -1,0 +1,6 @@
+<!--components/backTop/backTop.wxml-->
+
+<view class="back-top" bindtap="goTop" hidden="{{scrollTop<400}}">
+  
+    <image class="back-top-img" src="/images/top.png"></image>
+</view>
